@@ -15,9 +15,9 @@ var chico = [
   picture: "http://www.chicorealestate.net/area_photos/park/five_mile_recreation_area-xl2326_18_54_14.jpg",
   from: "chicorealestate.com"
   },
-  {description: "Diamond Alley"
+  {description: "Diamond Alley",
   picture: "https://farm5.staticflickr.com/4038/4627204089_3e79637e62_b.jpg",
-  from: "farm5.staticflickr.com"
+  from: "farm5.staticflickr.com"}
 ];
 
 var current= 0;
@@ -32,4 +32,7 @@ function shuffleGallery()
     }
   }
   while(current != chico[indx]);
+  document.getElementById("source").innerHTML="Image courtesy of: "+ current.from;
+  document.getElementById("caption").innerHTML=current.description;
+  document.getElementById("picture").src=current.picture;
 }
